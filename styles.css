@@ -1,0 +1,258 @@
+/* Reset & Base */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-home: #e0d5d0;
+  --bg-page: #ffffff;
+  --text-primary: #1a1a1a;
+  --text-secondary: #999999;
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --max-width: 1200px;
+  --side-padding: 8vw;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+/* ─── Navbar ─── */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem var(--side-padding);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: transparent;
+}
+
+.navbar.page-nav {
+  background: var(--bg-page);
+  border-bottom: 1px solid #eee;
+}
+
+.navbar .site-name {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar nav a {
+  font-size: 0.9rem;
+  font-weight: 400;
+  transition: opacity 0.2s;
+}
+
+.navbar nav a:hover {
+  opacity: 0.6;
+}
+
+.navbar nav a.active {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ─── Homepage ─── */
+.home-page {
+  background: var(--bg-home);
+  min-height: 100vh;
+}
+
+.home-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  padding: 0 var(--side-padding);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  align-items: center;
+  gap: 4rem;
+}
+
+.home-left {
+  padding-top: 5rem;
+}
+
+.home-left h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.home-left .bio {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
+  max-width: 460px;
+  margin-bottom: 3rem;
+  color: var(--text-primary);
+}
+
+.home-left .bio p + p {
+  margin-top: 0.8rem;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.nav-links a {
+  font-size: 1rem;
+  font-weight: 700;
+  transition: opacity 0.2s;
+}
+
+.nav-links a:hover {
+  opacity: 0.6;
+}
+
+.home-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5rem;
+}
+
+.home-right img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 3 / 4;
+}
+
+/* ─── Inner Pages ─── */
+.inner-page {
+  background: var(--bg-page);
+  min-height: 100vh;
+  padding-top: 5rem;
+}
+
+.page-content {
+  max-width: 750px;
+  padding: 3rem var(--side-padding) 6rem;
+}
+
+.page-content h1 {
+  font-size: 2.8rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin-bottom: 2.5rem;
+}
+
+.page-content h2 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.page-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 0.4rem;
+}
+
+.page-content .paper-title {
+  margin-top: 1.2rem;
+}
+
+.page-content .paper-detail {
+  color: #555;
+}
+
+.page-content .paper-detail a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.page-content .paper-detail a:hover {
+  opacity: 0.6;
+}
+
+.page-content .journal {
+  font-style: italic;
+}
+
+.contact-link {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.contact-link:hover {
+  opacity: 0.6;
+}
+
+/* ─── Footer ─── */
+.footer {
+  padding: 3rem var(--side-padding);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.footer.home-footer {
+  background: var(--bg-home);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+  .home-content {
+    grid-template-columns: 1fr;
+    padding-top: 6rem;
+    gap: 2rem;
+  }
+
+  .home-left {
+    padding-top: 0;
+  }
+
+  .home-left h1 {
+    font-size: 2.2rem;
+  }
+
+  .home-right {
+    padding-top: 0;
+    order: -1;
+  }
+
+  .home-right img {
+    max-width: 300px;
+  }
+
+  .page-content h1 {
+    font-size: 2rem;
+  }
+}
