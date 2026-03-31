@@ -6,10 +6,13 @@
 }
 
 :root {
-  --bg-home: #e0d5d0;
+  --brown: #4E3629;
+  --brown-light: #6B4C3B;
+  --bg-home: #F1ECE7;
   --bg-page: #ffffff;
-  --text-primary: #1a1a1a;
-  --text-secondary: #999999;
+  --text-primary: #2C2220;
+  --text-secondary: #8C7E78;
+  --border-color: rgba(78, 54, 41, 0.1);
   --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --max-width: 1200px;
   --side-padding: 8vw;
@@ -48,7 +51,7 @@ a {
 
 .navbar.page-nav {
   background: var(--bg-page);
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .navbar .site-name {
@@ -75,6 +78,7 @@ a {
 .navbar nav a.active {
   text-decoration: underline;
   text-underline-offset: 4px;
+  text-decoration-color: var(--brown);
 }
 
 /* ─── Homepage ─── */
@@ -186,11 +190,22 @@ a {
   margin-top: 1.2rem;
 }
 
+.page-content .paper-title a {
+  color: var(--brown-light);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.page-content .paper-title a:hover {
+  opacity: 0.6;
+}
+
 .page-content .paper-detail {
-  color: #555;
+  color: var(--text-secondary);
 }
 
 .page-content .paper-detail a {
+  color: var(--brown-light);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -218,13 +233,13 @@ a {
 /* ─── Footer ─── */
 .footer {
   padding: 3rem var(--side-padding);
-  color: var(--text-secondary);
+  background: var(--brown);
+  color: rgba(255, 255, 255, 0.6);
   font-size: 0.85rem;
 }
 
 .footer.home-footer {
-  background: var(--bg-home);
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  background: var(--brown);
 }
 
 /* ─── Responsive ─── */
