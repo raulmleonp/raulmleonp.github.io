@@ -186,8 +186,13 @@ a {
   margin-bottom: 0.4rem;
 }
 
+.page-content .paper {
+  margin-top: 1.8rem;
+}
+
 .page-content .paper-title {
-  margin-top: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 0.2rem;
 }
 
 .page-content .paper-title a {
@@ -197,6 +202,22 @@ a {
 }
 
 .page-content .paper-title a:hover {
+  opacity: 0.6;
+}
+
+.page-content .paper-authors {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 0.1rem;
+}
+
+.page-content .paper-authors a {
+  color: var(--brown-light);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.page-content .paper-authors a:hover {
   opacity: 0.6;
 }
 
@@ -212,6 +233,37 @@ a {
 
 .page-content .paper-detail a:hover {
   opacity: 0.6;
+}
+
+.abstract-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: var(--font-main);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  margin-top: 0.2rem;
+}
+
+.abstract-toggle:hover {
+  opacity: 0.6;
+}
+
+.abstract-content {
+  display: none;
+  margin-top: 0.6rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--border-color);
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+.abstract-content.open {
+  display: block;
 }
 
 .page-content .journal {

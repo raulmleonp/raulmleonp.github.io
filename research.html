@@ -24,25 +24,54 @@
 
     <h2>Working Papers</h2>
 
-    <p class="paper-title"><strong>Neighborhoods, Family and Intergenerational Mobility</strong> (with <a href="https://goyarazavi.github.io/" target="_blank">Goya Razavi</a>)</p>
-    <p class="paper-detail"><em>Submitted</em></p>
+    <div class="paper">
+      <p class="paper-title"><strong>Neighborhoods, Family and Intergenerational Mobility</strong></p>
+      <p class="paper-authors">with <a href="https://goyarazavi.github.io/" target="_blank">Goya Razavi</a> &amp; Sadegh Eshaghnia</p>
+      <p class="paper-detail"><em>Submitted</em></p>
+      <button class="abstract-toggle" onclick="toggleAbstract(this)">Abstract</button>
+      <div class="abstract-content">
+        <p>To what extent do childhood neighborhoods shape long-run socioeconomic outcomes, and through which mechanisms? Using the quasi-random assignment of refugee children across neighborhoods in Denmark, we show that exposure to higher-quality neighborhoods&mdash;as measured by average neighborhood income and the wage outcomes of permanent resident children&mdash;raises labor force participation and market income in adulthood. Beyond economic integration, better neighborhoods further promote social integration by increasing educational attainment and naturalization. Applying a causal mediation analysis, we reject full mediation via neighborhood and school characteristics but not via parental income, pointing to the family as a fundamental mediator of neighborhood effects.</p>
+      </div>
+    </div>
 
-    <p class="paper-title"><strong>When Excellence Backfires: The Impact of Superstars on Peers</strong> (with Rigissa Megalokonomou)</p>
+    <div class="paper">
+      <p class="paper-title"><strong>When Excellence Backfires: The Impact of Superstars on Peers</strong></p>
+      <p class="paper-authors">with Rigissa Megalokonomou</p>
+    </div>
 
     <h2>Work in Progress</h2>
 
-    <p class="paper-title"><strong>The Persistent Economic Cost of Genocide: An Intergenerational Study of the Stolen Generations</strong></p>
+    <div class="paper">
+      <p class="paper-title"><strong>The Persistent Economic Cost of Genocide: An Intergenerational Study of the Stolen Generations</strong></p>
+    </div>
 
-    <p class="paper-title"><strong>School Meals and Childhood Anemia in Peru</strong> (with Cesar Chavez and Jorge Ochoa)</p>
+    <div class="paper">
+      <p class="paper-title"><strong>School Meals and Childhood Anemia in Peru</strong></p>
+      <p class="paper-authors">with Cesar Chavez &amp; Jorge Ochoa</p>
+    </div>
 
-    <p class="paper-title"><strong>From Myth to Trial: Unbundling the Blood Libel in Medieval Europe</strong></p>
+    <div class="paper">
+      <p class="paper-title"><strong>From Myth to Trial: Unbundling the Blood Libel in Medieval Europe</strong></p>
+    </div>
 
-    <p class="paper-title"><strong>Rigorous Sequential Inference in Economic Field Experiments: An E-process Approach</strong></p>
+    <div class="paper">
+      <p class="paper-title"><strong>Rigorous Sequential Inference in Economic Field Experiments: An E-process Approach</strong></p>
+    </div>
   </main>
 
   <footer class="footer">
+    <a href="https://www.brown.edu" target="_blank">
+      <img src="brown-logo.png" alt="Brown University" style="height: 60px; margin-bottom: 1rem;">
+    </a>
     <p>&copy; Raul Mathias Leon 2026</p>
   </footer>
 
+<script>
+function toggleAbstract(btn) {
+  const content = btn.nextElementSibling;
+  const isOpen = content.classList.toggle('open');
+  btn.textContent = isOpen ? 'Hide Abstract' : 'Abstract';
+}
+</script>
 </body>
 </html>
