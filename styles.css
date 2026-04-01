@@ -123,6 +123,25 @@ a {
   margin-top: 0.8rem;
 }
 
+.contact-info {
+  margin-bottom: 2rem;
+}
+
+.contact-info p {
+  margin-bottom: 0.4rem;
+}
+
+.contact-info a {
+  font-size: 0.95rem;
+  color: var(--brown-light);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.contact-info a:hover {
+  opacity: 0.6;
+}
+
 .nav-links {
   display: flex;
   flex-direction: column;
