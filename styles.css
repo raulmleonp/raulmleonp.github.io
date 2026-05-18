@@ -342,38 +342,191 @@ a {
 
 /* ─── Responsive ─── */
 @media (max-width: 768px) {
+  :root {
+    --side-padding: 6vw;
+  }
+
+  /* Navbar */
+  .navbar {
+    padding: 1rem var(--side-padding);
+  }
+
+  .navbar .site-name {
+    font-size: 0.95rem;
+  }
+
+  .navbar nav {
+    gap: 1.25rem;
+  }
+
+  .navbar nav a {
+    font-size: 0.85rem;
+  }
+
+  /* Homepage */
   .home-content {
     grid-template-columns: 1fr;
-    padding-top: 6rem;
-    gap: 2rem;
+    min-height: 0;
+    padding-top: 4.5rem;
+    padding-bottom: 2.5rem;
+    gap: 1.5rem;
+    align-items: start;
+    text-align: center;
   }
 
   .home-left {
     padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .home-left h1 {
-    font-size: 2.2rem;
+    font-size: 1.85rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .home-left .bio {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 1.75rem;
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .home-left .bio p + p {
+    margin-top: 0.7rem;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem 1.75rem;
+  }
+
+  .nav-links a {
+    font-size: 0.95rem;
   }
 
   .home-right {
-    padding-top: 0;
+    padding-top: 0.5rem;
     order: -1;
   }
 
   .home-right img {
-    max-width: 300px;
+    max-width: 200px;
+    border-radius: 4px;
   }
 
-  .page-content h1 {
-    font-size: 2rem;
+  /* Inner pages */
+  .inner-page {
+    padding-top: 4rem;
   }
 
   .page-hero {
-    height: 220px;
+    height: 200px;
+    padding: 1.5rem var(--side-padding);
   }
 
   .page-hero h1 {
-    font-size: 2rem;
+    font-size: 1.9rem;
+  }
+
+  .page-content {
+    padding: 2rem var(--side-padding) 4rem;
+  }
+
+  .page-content h1 {
+    font-size: 1.9rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .page-content h2 {
+    font-size: 1.4rem;
+    margin-top: 2.25rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .page-content p {
+    font-size: 0.98rem;
+  }
+
+  .page-content .paper {
+    margin-top: 1.5rem;
+  }
+
+  .page-content .paper-authors {
+    font-size: 0.9rem;
+  }
+
+  .abstract-content {
+    font-size: 0.9rem;
+    padding-left: 0.85rem;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 2rem var(--side-padding);
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 420px) {
+  :root {
+    --side-padding: 5vw;
+  }
+
+  .navbar {
+    padding: 0.85rem var(--side-padding);
+  }
+
+  .navbar .site-name {
+    font-size: 0.85rem;
+  }
+
+  .navbar nav {
+    gap: 0.9rem;
+  }
+
+  .navbar nav a {
+    font-size: 0.8rem;
+  }
+
+  .home-left h1 {
+    font-size: 1.65rem;
+  }
+
+  .home-left .bio {
+    font-size: 0.9rem;
+  }
+
+  .nav-links {
+    gap: 1.2rem 1.4rem;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+
+  .home-right img {
+    max-width: 170px;
+  }
+
+  .page-hero {
+    height: 170px;
+  }
+
+  .page-hero h1 {
+    font-size: 1.65rem;
+  }
+
+  .page-content h1 {
+    font-size: 1.7rem;
+  }
+
+  .page-content h2 {
+    font-size: 1.25rem;
   }
 }
